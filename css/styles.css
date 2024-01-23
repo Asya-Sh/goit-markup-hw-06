@@ -94,6 +94,21 @@ img {
   color: #2e2f42;
 }
 
+.header-menu {
+  display: flex;
+  padding: 0;
+  border: none;
+  background: transparent;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .header-menu {
+    display: none;
+  }
+}
+
 .header-links {
   display: none;
   list-style-type: none;
@@ -460,12 +475,16 @@ img {
 }
 
 @media only screen and (min-width: 768px) {
+  .our-team {
+    padding-top: 96px;
+  }
   .team-ul {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 24px;
+    padding-bottom: 96px;
   }
   .team-li {
     display: flex;
@@ -618,10 +637,6 @@ footer {
   row-gap: 72px;
 }
 
-.cont-ftr-logo {
-  margin-right: 120px;
-}
-
 footer .logo-ftr {
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
@@ -644,25 +659,22 @@ footer .logo-accent {
   color: #f4f4fd;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  width: 264px;
 }
 .cont-ftr-icons {
   margin-right: 80px;
 }
 
-.ftr-title,
-.subscribe-text {
+.ftr-title {
   color: #fff;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .ftr-ul {
   display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 16px;
 }
 
@@ -685,7 +697,9 @@ footer .logo-accent {
 
 .footer-form {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 16px;
+  /* gap: 24px; */
 }
 
 .form-mail {
@@ -708,8 +722,10 @@ footer .logo-accent {
 
 .subsc-butn {
   padding: 8px 16px;
-  width: 100%;
+  width: 165px;
   height: 40px;
+  display: flex;
+  flex-wrap: wrap;
 
   background-color: #4d5ae5;
   cursor: pointer;
@@ -733,9 +749,21 @@ footer .logo-accent {
   background-color: #404bbf;
 }
 
+@media only screen and (min-width: 768px) {
+  .footer-form {
+    flex-direction: row;
+  }
+  .subsc-butn {
+    width: 100%;
+    height: 40px;
+  }
+  .ftr-title {
+    text-align: start;
+  }
+}
+
 @media only screen and (min-width: 1158px) {
   footer {
-    background-color: #2e2f42;
     padding: 100px 0;
   }
   .form-mail {
@@ -744,6 +772,14 @@ footer .logo-accent {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .cont-ftr-logo {
+    margin-right: 120px;
+  }
+
+  .footer-cont {
+    flex-direction: row;
+    row-gap: 72px;
   }
 }
 /* #endregion Footer */
