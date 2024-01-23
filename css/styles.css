@@ -225,7 +225,7 @@ img {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office.jpg);
+    url(../images/people-office-mob1x.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 1440px;
@@ -246,6 +246,17 @@ img {
   margin-bottom: 72px;
 }
 
+@media screen and (min-resolution: 192dpi) {
+  .tagline-title {
+    background-color: rgba(46, 47, 66, 0.7);
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-mob2x.jpg);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .tagline {
     font-size: 56px;
@@ -257,6 +268,25 @@ img {
   .tagline-title {
     padding: 112px 0;
   }
+  .tagline-title {
+    background-color: rgba(46, 47, 66, 0.7);
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-tab1x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  .tagline-title {
+    background-color: rgba(46, 47, 66, 0.7);
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-tab2x.jpg);
+  }
 }
 
 @media screen and (min-width: 1158px) {
@@ -265,6 +295,25 @@ img {
   }
   .tagline-title {
     padding: 188px 0;
+  }
+  .tagline-title {
+    background-color: rgba(46, 47, 66, 0.7);
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-resolution: 192dpi) {
+  .tagline-title {
+    background-color: rgba(46, 47, 66, 0.7);
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office-desk2x.jpg);
   }
 }
 
@@ -674,6 +723,7 @@ footer .logo-accent {
   color: #f4f4fd;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  text-align: left;
 }
 .cont-ftr-icons {
   margin-right: 80px;
@@ -690,6 +740,8 @@ footer .logo-accent {
 
 .ftr-ul {
   display: flex;
+  text-align: center;
+  align-items: center;
   gap: 16px;
 }
 
@@ -788,10 +840,14 @@ footer .logo-accent {
     justify-content: center;
     align-items: center;
   }
+
+  .footer-form {
+    flex-direction: row;
+    gap: 24px;
+  }
   .cont-ftr-logo {
     margin-right: 120px;
   }
-
   .footer-cont {
     flex-direction: row;
     row-gap: 72px;
